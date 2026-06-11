@@ -1,6 +1,3 @@
-# portfolio
-Cybersecurity portfolio website showcasing my skills, experience, projects, certifications, and tools in Network Security, Linux Administration, VAPT, SOC, and IT Infrastructure.
-
 # Rahul Kure - Cybersecurity Portfolio
 
 A modern cybersecurity portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
