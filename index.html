@@ -453,8 +453,8 @@
     .exp-list { display: flex; flex-direction: column; gap: 0; }
     .exp-item {
       display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 0 40px;
+      grid-template-columns: 200px 1fr;
+      gap: 0 48px;
       position: relative;
       padding-bottom: 48px;
     }
@@ -462,7 +462,7 @@
     .exp-item::before {
       content: '';
       position: absolute;
-      left: 148px;
+      left: 208px;
       top: 8px;
       bottom: 0;
       width: 1px;
@@ -476,10 +476,11 @@
       letter-spacing: 0.06em;
       padding-top: 4px;
       text-align: right;
+      padding-right: 4px;
     }
     .exp-dot {
       position: absolute;
-      left: 140px;
+      left: 200px;
       top: 6px;
       width: 17px; height: 17px;
       border-radius: 50%;
@@ -881,6 +882,10 @@
     .divider { width: 100%; height: 1px; background: var(--border-subtle); }
 
     /* ===== ANIMATIONS ===== */
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -1021,7 +1026,7 @@
     </p>
 
     <div class="hero-btns">
-      <a href="Rahul_kure_1.pdf" class="btn-primary" onclick="alert('Resume download — add your PDF here!')">
+      <a href="#resume" class="btn-primary" onclick="alert('Resume download — add your PDF here!')">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download Resume
       </a>
@@ -1129,46 +1134,48 @@
     <div class="exp-list">
 
       <div class="exp-item reveal">
+        <div class="exp-date">Sep 2025 –<br>Present</div>
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <div class="exp-company">Ruchi Printers · Bhopal</div>
+          <div class="exp-role">Network Engineer</div>
+          <ul class="exp-bullets">
+            <li>Designed, deployed, and maintained LAN/WAN infrastructure including routers, switches, and firewall configurations across the organisation.</li>
+            <li>Administered Windows Server environments, managing user accounts, group policies, shared resources, and domain-level operations.</li>
+            <li>Oversaw complete network security posture — firewall rule management, access control, and ongoing vulnerability monitoring.</li>
+            <li>Planned and executed structured cabling, CCTV network installation, and network device lifecycle management.</li>
+            <li>Performed proactive network monitoring, diagnosed connectivity issues, and reduced downtime through systematic troubleshooting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-1">
         <div class="exp-date">Aug 2024 –<br>Mar 2025</div>
         <div class="exp-dot"></div>
         <div class="exp-content">
           <div class="exp-company">VellKO Media · Bhopal</div>
           <div class="exp-role">Jr. Linux System Administrator</div>
           <ul class="exp-bullets">
-            <li>Managed Linux servers, VPS provisioning, WHM/cPanel, SolusVM, and WHMCS billing environments across multi-tenant hosting setups.</li>
-            <li>Handled DNS records, PTR records, SSL certificates, firewall rules, and client-facing hosting tickets end to end.</li>
-            <li>Diagnosed and resolved Exim/Postfix mail server issues, ensuring deliverability and server reputation health.</li>
-            <li>Oversaw OS installations, server monitoring, backup verification, and remote troubleshooting for client VPS environments.</li>
-            <li>Supported AWS Workspaces, Synology NAS monitoring, Duo MFA, Active Directory basics, and user provisioning workflows.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-date">Prior Role</div>
-        <div class="exp-dot"></div>
-        <div class="exp-content">
-          <div class="exp-company">Magnum Group · Bhopal</div>
-          <div class="exp-role">Desktop Support Engineer</div>
-          <ul class="exp-bullets">
-            <li>Provided hardware, software, Outlook, and end-user support across multi-department office environments.</li>
-            <li>Installed and configured Windows systems, drivers, applications, and network settings for 50+ users.</li>
-            <li>Troubleshot LAN, internet connectivity, printer sharing, and basic firewall/security issues.</li>
-            <li>Maintained IT asset inventory and handled day-to-day infrastructure support tickets.</li>
+            <li>Administered Linux servers and VPS infrastructure across multi-tenant hosting environments using WHM/cPanel, SolusVM, and WHMCS.</li>
+            <li>Managed DNS records, PTR records, SSL certificates, and firewall rules — handling client-facing hosting operations end to end.</li>
+            <li>Diagnosed and resolved Exim/Postfix mail server issues, maintaining consistent deliverability and strong server reputation.</li>
+            <li>Executed OS installations, server health monitoring, backup verification, and remote troubleshooting for client VPS environments.</li>
+            <li>Supported AWS Workspaces, Synology NAS, Duo MFA, Active Directory, and user provisioning across the organisation's cloud-hybrid setup.</li>
           </ul>
         </div>
       </div>
 
       <div class="exp-item reveal reveal-delay-2">
-        <div class="exp-date">Prior Role</div>
+        <div class="exp-date">Jun 2023 –<br>Aug 2024</div>
         <div class="exp-dot"></div>
         <div class="exp-content">
-          <div class="exp-company">Ruchi Printers · Bhopal</div>
-          <div class="exp-role">Network Engineer</div>
+          <div class="exp-company">Magnum Group · Bhopal</div>
+          <div class="exp-role">Desktop Support Engineer</div>
           <ul class="exp-bullets">
-            <li>Managed LAN connectivity, Windows Server administration, and printer/network device troubleshooting.</li>
-            <li>Configured and maintained firewalls, routers, switches, and network-layer infrastructure.</li>
-            <li>Assisted with CCTV/network infrastructure installation and server-side maintenance tasks.</li>
+            <li>Delivered end-to-end hardware, software, and Outlook support across multi-department office environments serving 50+ users.</li>
+            <li>Deployed and configured Windows workstations, applications, drivers, and network settings for new and existing users.</li>
+            <li>Resolved LAN, internet connectivity, printer sharing, and network security issues, ensuring consistent uptime across all departments.</li>
+            <li>Maintained IT asset inventory and managed day-to-day infrastructure support tickets with timely resolution and documentation.</li>
           </ul>
         </div>
       </div>
@@ -1194,19 +1201,19 @@
           <span class="skill-cat-name">Cybersecurity</span>
         </div>
         <div class="skill-tags">
-          <span class="skill-tag hot">VAPT Basics</span>
+          <span class="skill-tag hot">VAPT</span>
           <span class="skill-tag hot">Burp Suite</span>
           <span class="skill-tag hot">Nmap</span>
           <span class="skill-tag hot">Metasploit</span>
           <span class="skill-tag hot">Wireshark</span>
-          <span class="skill-tag">Bettercap</span>
-          <span class="skill-tag">Shodan</span>
-          <span class="skill-tag">theHarvester</span>
-          <span class="skill-tag">Vulnerability Assessment</span>
-          <span class="skill-tag">Web Security Basics</span>
+          <span class="skill-tag hot">Bettercap</span>
+          <span class="skill-tag hot">Shodan</span>
+          <span class="skill-tag hot">theHarvester</span>
+          <span class="skill-tag hot">Vulnerability Assessment</span>
+          <span class="skill-tag hot">Web Security</span>
           <span class="skill-tag hot">OWASP Top 10</span>
           <span class="skill-tag">SIEM / SOC Fundamentals</span>
-          <span class="skill-tag">MITRE ATT&amp;CK Basics</span>
+          <span class="skill-tag">MITRE ATT&amp;CK</span>
         </div>
       </div>
 
@@ -1219,16 +1226,18 @@
         </div>
         <div class="skill-tags">
           <span class="skill-tag hot">Linux Administration</span>
-          <span class="skill-tag">RHCSA Basics</span>
           <span class="skill-tag hot">Apache / Nginx</span>
           <span class="skill-tag hot">cPanel / WHM</span>
-          <span class="skill-tag">WHMCS</span>
-          <span class="skill-tag">SolusVM</span>
+          <span class="skill-tag hot">WHMCS</span>
+          <span class="skill-tag hot">SolusVM</span>
           <span class="skill-tag hot">DNS Management</span>
-          <span class="skill-tag">SSL Management</span>
-          <span class="skill-tag">Firewall Rules</span>
-          <span class="skill-tag">Shell Commands</span>
-          <span class="skill-tag">Server Monitoring</span>
+          <span class="skill-tag hot">SSL Management</span>
+          <span class="skill-tag hot">Firewall Rules</span>
+          <span class="skill-tag hot">Shell Scripting / Bash</span>
+          <span class="skill-tag hot">Server Monitoring</span>
+          <span class="skill-tag hot">Mail Server (Exim/Postfix)</span>
+          <span class="skill-tag">VPS Provisioning</span>
+          <span class="skill-tag">Backup &amp; Recovery</span>
         </div>
       </div>
 
@@ -1242,12 +1251,16 @@
         <div class="skill-tags">
           <span class="skill-tag hot">TCP/IP</span>
           <span class="skill-tag hot">DNS</span>
-          <span class="skill-tag">DHCP</span>
-          <span class="skill-tag">VLAN Basics</span>
-          <span class="skill-tag">Routing &amp; Switching</span>
-          <span class="skill-tag">Firewall Basics</span>
-          <span class="skill-tag">VPN Basics</span>
-          <span class="skill-tag">LAN/WAN Troubleshooting</span>
+          <span class="skill-tag hot">DHCP</span>
+          <span class="skill-tag hot">VLAN</span>
+          <span class="skill-tag hot">Routing &amp; Switching</span>
+          <span class="skill-tag hot">Firewall Configuration</span>
+          <span class="skill-tag hot">VPN</span>
+          <span class="skill-tag hot">LAN/WAN Troubleshooting</span>
+          <span class="skill-tag hot">Network Monitoring</span>
+          <span class="skill-tag hot">Subnetting</span>
+          <span class="skill-tag hot">OSI Model</span>
+          <span class="skill-tag hot">Network Security</span>
         </div>
       </div>
 
@@ -1259,13 +1272,15 @@
           <span class="skill-cat-name">Windows &amp; IT Support</span>
         </div>
         <div class="skill-tags">
-          <span class="skill-tag">Windows Server Basics</span>
-          <span class="skill-tag">Active Directory</span>
-          <span class="skill-tag">Group Policy</span>
-          <span class="skill-tag">User Support</span>
-          <span class="skill-tag">Printer Troubleshooting</span>
-          <span class="skill-tag">Outlook Support</span>
-          <span class="skill-tag">Hardware Troubleshooting</span>
+          <span class="skill-tag hot">Windows Server</span>
+          <span class="skill-tag hot">Active Directory</span>
+          <span class="skill-tag hot">Group Policy</span>
+          <span class="skill-tag hot">User Provisioning</span>
+          <span class="skill-tag hot">Printer Troubleshooting</span>
+          <span class="skill-tag hot">Outlook / Exchange Support</span>
+          <span class="skill-tag hot">Hardware Troubleshooting</span>
+          <span class="skill-tag hot">Remote Desktop (RDP)</span>
+          <span class="skill-tag hot">IT Asset Management</span>
         </div>
       </div>
 
@@ -1278,11 +1293,35 @@
         </div>
         <div class="skill-tags">
           <span class="skill-tag hot">VPS Hosting</span>
-          <span class="skill-tag">Shared Hosting</span>
-          <span class="skill-tag">Cloud Hosting Basics</span>
-          <span class="skill-tag">AWS Workspaces</span>
-          <span class="skill-tag">Synology NAS</span>
+          <span class="skill-tag hot">Shared Hosting</span>
+          <span class="skill-tag hot">Cloud Hosting</span>
+          <span class="skill-tag hot">AWS Workspaces</span>
+          <span class="skill-tag hot">Synology NAS</span>
           <span class="skill-tag hot">Mail Server (Exim/Postfix)</span>
+          <span class="skill-tag hot">Duo MFA</span>
+          <span class="skill-tag hot">SSL / TLS</span>
+          <span class="skill-tag hot">Domain Management</span>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="skill-cat-name">AWS Cloud</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag hot">AWS EC2</span>
+          <span class="skill-tag hot">AWS S3</span>
+          <span class="skill-tag hot">AWS IAM</span>
+          <span class="skill-tag hot">AWS VPC</span>
+          <span class="skill-tag hot">AWS Route 53</span>
+          <span class="skill-tag hot">AWS Workspaces</span>
+          <span class="skill-tag hot">Security Groups</span>
+          <span class="skill-tag hot">AWS CloudWatch</span>
+          <span class="skill-tag">AWS Lambda</span>
+          <span class="skill-tag">AWS RDS</span>
         </div>
       </div>
 
@@ -1571,22 +1610,26 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Name</label>
-            <input class="form-input" type="text" placeholder="Your name" />
+            <input class="form-input" id="f-name" type="text" placeholder="Your name" />
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input class="form-input" type="email" placeholder="your@email.com" />
+            <input class="form-input" id="f-email" type="email" placeholder="your@email.com" />
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">Subject</label>
-          <input class="form-input" type="text" placeholder="Job opportunity / Collaboration" />
+          <input class="form-input" id="f-subject" type="text" placeholder="Job opportunity / Collaboration" />
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Tell me about the role or what you'd like to discuss..."></textarea>
+          <textarea class="form-textarea" id="f-message" placeholder="Tell me about the role or what you'd like to discuss..."></textarea>
         </div>
-        <button class="form-submit" onclick="handleSubmit()">
+        <div id="form-error" style="display:none;font-family:var(--font-mono);font-size:0.75rem;color:#f87171;margin-bottom:4px;"></div>
+        <div id="form-success" style="display:none;font-family:var(--font-mono);font-size:0.78rem;color:#22c55e;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:4px;">
+          ✓ Message sent! I'll get back to you soon.
+        </div>
+        <button class="form-submit" id="form-btn" onclick="handleSubmit()">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Send Message
         </button>
@@ -1638,17 +1681,59 @@
   revealEls.forEach(el => observer.observe(el));
 
   // ===== CONTACT FORM =====
-  function handleSubmit() {
-    const btn = document.querySelector('.form-submit');
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#22c55e';
-    btn.style.cursor = 'default';
-    setTimeout(() => {
+  async function handleSubmit() {
+    const name    = document.getElementById('f-name').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const subject = document.getElementById('f-subject').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+    const errEl   = document.getElementById('form-error');
+    const sucEl   = document.getElementById('form-success');
+    const btn     = document.getElementById('form-btn');
+
+    // Reset
+    errEl.style.display = 'none';
+    sucEl.style.display = 'none';
+
+    // Validation
+    if (!name)    { errEl.textContent = '⚠ Please enter your name.';    errEl.style.display = 'block'; return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+                  { errEl.textContent = '⚠ Please enter a valid email.'; errEl.style.display = 'block'; return; }
+    if (!subject) { errEl.textContent = '⚠ Please enter a subject.';    errEl.style.display = 'block'; return; }
+    if (!message) { errEl.textContent = '⚠ Please enter a message.';    errEl.style.display = 'block'; return; }
+
+    // Loading state
+    btn.disabled = true;
+    btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Sending…`;
+
+    try {
+      // ── STEP 1: Go to https://formspree.io/f/YOUR_FORM_ID ──
+      // Sign up free at formspree.io, create a form pointed at rahulkure5@gmail.com
+      // Then replace YOUR_FORM_ID below with your actual form ID (looks like "xbjvkpzn")
+      const FORMSPREE_ID = 'YOUR_FORM_ID';
+
+      const res = await fetch(`https://formspree.io/f/${xrevyyzp}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message })
+      });
+
+      if (res.ok) {
+        sucEl.style.display = 'block';
+        document.getElementById('f-name').value    = '';
+        document.getElementById('f-email').value   = '';
+        document.getElementById('f-subject').value = '';
+        document.getElementById('f-message').value = '';
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+        btn.disabled = false;
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (e) {
+      errEl.textContent = '⚠ Something went wrong. Please email me directly at rahulkure5@gmail.com';
+      errEl.style.display = 'block';
       btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
-      btn.style.background = '';
-      btn.style.cursor = '';
-    }, 3000);
-    // Replace with your actual form submission logic (Formspree, EmailJS, etc.)
+      btn.disabled = false;
+    }
   }
 
   // ===== SMOOTH ACTIVE NAV =====
